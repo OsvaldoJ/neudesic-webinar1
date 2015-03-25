@@ -9,7 +9,7 @@ namespace MyContacts.Core.Services
     public class ContactService : IContactService
     {
         private const string ServiceUrl = "http://contactsservice.azurewebsites.net/api/contacts";
-        private IList<Contact> _contacts;
+        private static IList<Contact> _contacts;
 
         public async Task<IList<Contact>> GetAllContacts()
         {
